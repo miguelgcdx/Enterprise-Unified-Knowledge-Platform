@@ -1,0 +1,35 @@
+{
+  "name": "enterprise-unified-knowledge-platform",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:up": "docker compose up -d",
+    "db:down": "docker compose down",
+    "db:migrate": "tsx src/cli/migrate.ts",
+    "seed": "tsx src/cli/seed.ts",
+    "api": "tsx watch src/server.ts",
+    "search": "tsx src/cli/search.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@langchain/textsplitters": "^1.0.2",
+    "ai": "^7.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "ollama-ai-provider-v2": "^4.0.1",
+    "pg": "^8.16.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.0",
+    "@types/pg": "^8.15.5",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
