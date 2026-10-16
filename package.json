@@ -10,7 +10,8 @@
     "api": "tsx watch src/server.ts",
     "search": "tsx src/cli/search.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "delete": "tsx src/cli/delete.ts"
   },
   "dependencies": {
     "@langchain/textsplitters": "^1.0.2",
